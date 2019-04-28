@@ -1,0 +1,1 @@
+amor=love,feliz=happy,triste=sad,livro=book,casa=home,escola=school,louco=crazy,português=portuguese,inglês=english,cachorro=dog,gato=cat
