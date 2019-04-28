@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+file: web/index.html
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/styles.css">
+        <!--  -->
+        <style>
+            .center{
+                margin: 0 auto;
+                width: 50%;
+            }
+        </style>
+        <title>Oraculo Mineiro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>What kind of product do you want to know the best?</h1>
+        <form action="oracleController1" class="center1"> 
+                        <!-- (1)oracleController1 -->
+            <!--  -->            
+            <select name="product_html">
+                <!--   (2)product_html -->
+                <option value="sweet_milk_sauce_html">sweet milk sauce</option>
+                <option value="cheese">cheese</option>
+            </select>
+            <input type="submit" value="Perguntar" />
+        </form>
+    </body>
+</html>
