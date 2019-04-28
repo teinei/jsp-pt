@@ -21,3 +21,8 @@ you can use
 but I use this command
 
 `git push origin master`
+
+edit global
+
+`git config --global --edit`
+`git commit --amend --reset-author`
