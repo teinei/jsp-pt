@@ -1,0 +1,10 @@
+github1
+https://github.com/regishideki/programacao-java-e-desenvolvimento-agil-ita
+
+
+github2
+https://github.com/Paulo-Sergio/Coursera-Javaweb-Avancado-ITA
+
+github3
+https://github.com/felmaia/Coursera-ITA-desenvolvimento-agil-com-java-avancado/tree/GamificationSemana4
+
