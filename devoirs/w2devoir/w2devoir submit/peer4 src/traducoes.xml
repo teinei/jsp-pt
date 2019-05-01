@@ -1,0 +1,26 @@
+<!--
+web/WEB-INF/*.xml
+-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Traducoes>
+	<Palavra Portugues="Ola" Ingles="Hello"/>
+	<Palavra Portugues="Adeus" Ingles="Goodbye"/>
+	<Palavra Portugues="Bom Dia" Ingles="Good Morning"/>
+	<Palavra Portugues="Almoço" Ingles="Launch"/>
+	<Palavra Portugues="Jantar" Ingles="Dinner"/>
+	<Palavra Portugues="Pequeno almoço" Ingles="Breakfast"/>
+	<Palavra Portugues="Sim" Ingles="Yes"/>
+	<Palavra Portugues="Nao" Ingles="No"/>
+	<Palavra Portugues="Peixe" Ingles="Fish"/>
+	<Palavra Portugues="Carne" Ingles="Meat"/>
+	<Palavra Portugues="Doutor" Ingles="Doctor"/>
+	<Palavra Portugues="Cao" Ingles="Dog"/>
+	<Palavra Portugues="Gato" Ingles="Cat"/>
+	<Palavra Portugues="Cobra" Ingles="Snake"/>
+	<Palavra Portugues="Rato" Ingles="Rat"/>
+	<Palavra Portugues="Frio" Ingles="Cold"/>
+	<Palavra Portugues="Quente" Ingles="Hot"/>
+	<Palavra Portugues="Graus" Ingles="Degrees"/>
+	<Palavra Portugues="Ar" Ingles="Air"/>
+	<Palavra Portugues="Sol" Ingles="Sun"/>
+</Traducoes>
