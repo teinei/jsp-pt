@@ -1,0 +1,124 @@
+
+
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.testng.annotations.*;
+import java.util.concurrent.TimeUnit;
+import org.junit.After;
+import static org.junit.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import java.util.regex.Pattern;
+
+/**
+ *
+ * @author Raul Santiago
+ */
+public class TesteSeleniumProjetoFinalCoursera {
+    
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @org.testng.annotations.BeforeClass(alwaysRun = true)
+  public void setUp() throws Exception {
+    String marionetteDriverLocation = "C:\\geckodriver.exe";
+    System.setProperty("webdriver.gecko.driver", marionetteDriverLocation);
+    driver = new FirefoxDriver();
+    baseUrl = "http://localhost:8080/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @org.testng.annotations.Test
+  public void testELoginComentario() throws Exception {
+    driver.get(baseUrl + "/ProjetoFinalCoursera/");
+    driver.findElement(By.id("inputEmail3")).clear();
+    driver.findElement(By.id("inputEmail3")).sendKeys("lua");
+    driver.findElement(By.id("inputPassword3")).clear();
+    driver.findElement(By.id("inputPassword3")).sendKeys("admin");
+    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    driver.findElement(By.xpath("(//a[contains(text(),'Selecione')])[6]")).click();
+    driver.findElement(By.id("validationTextarea")).clear();
+    driver.findElement(By.id("validationTextarea")).sendKeys("Gosto");
+    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    assertEquals(driver.findElement(By.xpath("//li[4]/span")).getText(), "RAUL SANTIAGO");
+  }
+  
+  @org.testng.annotations.Test
+  public void testELoginRanking() throws Exception {
+    driver.get(baseUrl + "/ProjetoFinalCoursera/");
+    driver.findElement(By.id("inputEmail3")).clear();
+    driver.findElement(By.id("inputEmail3")).sendKeys("lua");
+    driver.findElement(By.id("inputPassword3")).clear();
+    driver.findElement(By.id("inputPassword3")).sendKeys("admin");
+    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    driver.findElement(By.linkText("Exibir Ranking dos Pontos")).click();
+    assertEquals(driver.findElement(By.cssSelector("font")).getText(), "Ranking dos Usuários");
+  }
+  
+  
+  @org.testng.annotations.Test
+  public void testELoginTopico() throws Exception {
+    driver.get(baseUrl + "/ProjetoFinalCoursera/");
+    driver.findElement(By.id("inputEmail3")).clear();
+    driver.findElement(By.id("inputEmail3")).sendKeys("lua");
+    driver.findElement(By.id("inputPassword3")).clear();
+    driver.findElement(By.id("inputPassword3")).sendKeys("admin");
+    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    driver.findElement(By.linkText("Cadastrar Tópico")).click();
+    driver.findElement(By.id("validationTitulo")).clear();
+    driver.findElement(By.id("validationTitulo")).sendKeys("Terra");
+    driver.findElement(By.id("validationTextarea")).clear();
+    driver.findElement(By.id("validationTextarea")).sendKeys("Planeta agua");
+    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    assertEquals(driver.findElement(By.cssSelector("div.alert.alert-success > strong")).getText(), "Tópico salvo com sucesso!");
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+  
+  
+    
+}

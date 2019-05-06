@@ -1,0 +1,6 @@
+<dataset>
+    <usuario LOGIN="Fatima" NOME="Fatima Gomes" EMAIL="fatima@tal.com.br" SENHA="qwer" PONTOS="33"/>
+    <usuario LOGIN="Fulano" NOME="Fulano de Tal" EMAIL="Fulano@tal.com.br" SENHA="1234" PONTOS="0"/>
+    <usuario LOGIN="joao" NOME="Joao Silva" EMAIL="joao@tal.com.br" SENHA="zxcv" PONTOS="95"/>
+    <usuario LOGIN="Sandra" NOME="Sandra Souza" EMAIL="sandra@tal.com.br" SENHA="asdf" PONTOS="15"/>
+</dataset>
